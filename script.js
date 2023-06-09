@@ -6,6 +6,7 @@ let firstCard, secondCard;
 
 function flipCard() {
     if(lockBoard)return;
+    if(this === firstCard)return;
 this.classList.add("flip");
 
 if(!cardIsFlipped){
@@ -41,12 +42,15 @@ function unFlipCards() {
     setTimeout(() =>{
         firstCard.classList.remove("flip")
         secondCard.classList.remove("flip")
-        lockBoard = false;
+        resetBoard();
 
     }, 1500) 
 }
 
-
+function resetBoard() {
+    [cardIsFlipped, lockBoard] = [false, false];
+    [firstCard, secondCard] = [null, null];
+}
 
 cards.forEach(function (card) {
     card.addEventListener("click", flipCard);
