@@ -4,36 +4,37 @@ let cardIsFlipped = false;
 let firstCard, secondCard;
 
 function flipCard() {
-this.classList.toggle("flip");
+this.classList.add("flip");
 
 if(!cardIsFlipped){
     //first click, first card
     cardIsFlipped = true;
     firstCard = this;
 
-   
+    return;
+}
 
-} else {
     // second click, second card
     cardIsFlipped = false;
     secondCard = this;
-    console.log({ firstCard, secondCard})
+   
 
-
-    if(firstCard.dataset.name === secondCard.dataset.name) {
-        disableCards();
-
-    } else {
-      unflipCards();
-    }
+    checkForMatch();
 }
-}
+
+  function checkforMatch() {
+
+    let isMatched = firstCard.dataset.name === secondCard.dataset.name;
+    isMatched ? disableCards() : unFlipCards ();
+  }
+     
+
 function desableCards() {
     firstCard.removeEventListener("click", flipCard);
     secondCard.removeEventListener("click", flipCard);
 }
 
-function unflipCards() {
+function unFlipCards() {
     setTimeout(() =>{
         firstCard.classList.remove("flip")
         secondCard.classList.remove("flip")
