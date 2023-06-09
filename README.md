@@ -5,4 +5,9 @@ Memory Card Game is designed for entertaining, good spending time and relaxing, 
 
 ![image](https://github.com/FreyaLitto/MemoryCardGame/assets/58091932/6f3eae0f-333b-4a37-a542-16bd39ebc84f)
 
+## Opening Cards. Lets Play! 
+
+![image](https://github.com/FreyaLitto/MemoryCardGame/assets/58091932/4a630a2d-29f6-437e-a90b-77bdda4ee871)
+
+
 
