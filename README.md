@@ -12,7 +12,7 @@ Memory Card Game is designed for entertaining, spending the time training your m
 ## Features
 
 - The game allowes to open only two cardst at the time, others are blocked.
-- If two cards match, they stay flipped till all other cards will be opened, if cards dont match, after 15sec they automatically flip again in the same position, so another mov is possible. 
+- If two cards match, they stay flipped till all other cards will be opened, if cards dont match, after 15sec they automatically flip again in the same position, so another move is possible. 
 - Ever singe game cards shuffle, so each time its a new game with random position of cards.
 - It`s very easy to start a new game, just refreshing a browser.
 
