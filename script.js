@@ -1,9 +1,11 @@
 const cards = document.querySelectorAll(".memory-card");
 
 let cardIsFlipped = false;
+let lockBoard = false;
 let firstCard, secondCard;
 
 function flipCard() {
+    if(lockBoard)return;
 this.classList.add("flip");
 
 if(!cardIsFlipped){
@@ -22,7 +24,7 @@ if(!cardIsFlipped){
     checkForMatch();
 }
 
-  function checkforMatch() {
+  function checkForMatch() {
 
     let isMatched = firstCard.dataset.name === secondCard.dataset.name;
     isMatched ? disableCards() : unFlipCards ();
@@ -35,9 +37,11 @@ function desableCards() {
 }
 
 function unFlipCards() {
+    lockBoard = true;
     setTimeout(() =>{
         firstCard.classList.remove("flip")
         secondCard.classList.remove("flip")
+        lockBoard = false;
 
     }, 1500) 
 }
